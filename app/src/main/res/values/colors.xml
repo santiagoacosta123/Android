@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores principales -->
+    <color name="amarillo_principal">#F0D779</color>
+    <color name="amarillo_dorado">#E8C95F</color>
+    <color name="amarillo_suave">#EFDD95</color>
+    <color name="amarillo_muy_claro">#FFFDD3</color>
+
+    <!-- Fondos -->
+    <color name="fondo_app">#FFFFFF</color>
+    <color name="blanco">#FFFFFF</color>
+
+    <!-- Textos e iconos -->
+    <color name="texto_principal">#222222</color>
+    <color name="texto_gris">#777777</color>
+    <color name="icono_gris">#777777</color>
+
+    <!-- Barra inferior -->
+    <color name="barra_fondo">#FFFFFF</color>
+    <color name="barra_borde">#F0D779</color>
+
+    <color name="azul_original">#2F6FA3</color>
+    <color name="azul_muy_claro">#EAF3FA</color>
+    <color name="verde_exito">#1A6215</color>
+    <color name="rojo_alerta">#8A3A3A</color>
+    <color name="rojo_alerta_fondo">#FDECEC</color>
+    <color name="negro">#000000</color>
+
+
+
+
 </resources>

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_app">
+
+    <!-- ================================= -->
+    <!-- FONDO VERDE SUPERIOR -->
+    <!-- ================================= -->
+
+    <ImageView
+        android:id="@+id/curvaVerde"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/inicio"
+        android:scaleType="fitXY"
+        android:contentDescription="@null" />
+
+
+    <!-- ================================= -->
+    <!-- CONTENIDO -->
+    <!-- ================================= -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:background="@android:color/transparent"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="40dp"
+            android:paddingBottom="20dp">
+
+
+            <!-- ================================= -->
+            <!-- ENCABEZADO -->
+            <!-- ================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtSaludo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¡Hola, Manipuladora!"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Bienvenida al menú del día"
+                        android:textColor="@color/negro"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <!-- ================================= -->
+                <!-- NOTIFICACIONES -->
+                <!-- ================================= -->
+
+                <FrameLayout
+                    android:id="@+id/btnNotificaciones"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/imgNotificaciones"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:contentDescription="Notificaciones"
+                        android:src="@drawable/ic_notifications" />
+
+                    <TextView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="top|end"
+                        android:background="@drawable/bg_notificacion"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/blanco"
+                        android:textSize="8sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+            <!-- ================================= -->
+            <!-- TURNO INICIADO -->
+            <!-- ================================= -->
+
+            <LinearLayout
+                android:id="@+id/cardTurno"
+                android:layout_width="230dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_turno_activo"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp">
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:background="@drawable/bg_punto_verde" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tu turno ha iniciado"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="07:30 AM • Turno de la mañana"
+                        android:textColor="@color/texto_gris"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ACTIVO"
+                    android:textColor="@color/verde_exito"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- ================================= -->
+            <!-- FECHA -->
+            <!-- ================================= -->
+
+            <LinearLayout
+                android:id="@+id/btnFecha"
+                android:layout_width="230dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_fecha"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/imgCalendario"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:contentDescription="Calendario"
+                    android:src="@drawable/ic_calendari" />
+
+                <TextView
+                    android:id="@+id/txtFecha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="9dp"
+                    android:text="Hoy 27 de agosto de 2026"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <!-- ================================= -->
+            <!-- TÍTULO -->
+            <!-- ================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:layout_marginBottom="10dp"
+                android:text="Selecciona una categoría"
+                android:textColor="@color/texto_principal"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <!-- ================================= -->
+            <!-- DESAYUNO -->
+            <!-- ================================= -->
+
+            <LinearLayout
+                android:id="@+id/cardDesayuno"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/bg_fecha"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="10dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:gravity="center"
+                    android:text="🍳"
+                    android:textSize="34sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Desayuno"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Ver platos asignados"
+                        android:textColor="@color/texto_gris"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="26dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="›"
+                    android:textColor="@color/negro"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+
+            <!-- ================================= -->
+            <!-- REFRIGERIO -->
+            <!-- ================================= -->
+
+            <LinearLayout
+                android:id="@+id/cardRefrigerio"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_fecha"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="10dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:gravity="center"
+                    android:text="🥪"
+                    android:textSize="34sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Refrigerio"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Ver platos asignados"
+                        android:textColor="@color/texto_gris"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="26dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="›"
+                    android:textColor="@color/negro"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+
+            <!-- ================================= -->
+            <!-- ALMUERZO -->
+            <!-- ================================= -->
+
+            <LinearLayout
+                android:id="@+id/cardAlmuerzo"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_fecha"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="10dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:gravity="center"
+                    android:text="🍲"
+                    android:textSize="34sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Almuerzo"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Ver platos asignados"
+                        android:textColor="@color/texto_gris"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="26dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="›"
+                    android:textColor="@color/negro"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ================================= -->
+    <!-- BARRA INFERIOR -->
+    <!-- ================================= -->
+
+    <include
+        android:id="@+id/bottomNavigation"
+        layout="@layout/bottom_navigation_mani"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom" />
+
+</FrameLayout>

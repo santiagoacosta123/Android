@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_app">
+
+    <!-- ================================= -->
+    <!-- BARRA INFERIOR -->
+    <!-- ================================= -->
+
+    <LinearLayout
+        android:id="@+id/barraInferior"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_bottom_navigation"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp">
+
+        <!-- INICIO -->
+        <LinearLayout
+            android:id="@+id/navInicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iconInicio"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="Inicio"
+                android:src="@drawable/ic_home" />
+
+            <TextView
+                android:id="@+id/textInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Inicio"
+                android:textColor="@color/icono_gris"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+        <!-- ASIGNADAS -->
+        <LinearLayout
+            android:id="@+id/navAsignadas"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iconAsignadas"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="Asignadas"
+                android:src="@drawable/ic_assignment" />
+
+            <TextView
+                android:id="@+id/textAsignadas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Asignadas"
+                android:textColor="@color/icono_gris"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+        <!-- INVENTARIO -->
+        <LinearLayout
+            android:id="@+id/navInventario"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iconInventario"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="Inventario"
+                android:src="@drawable/ic_inventory" />
+
+            <TextView
+                android:id="@+id/textInventario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Inventario"
+                android:textColor="@color/icono_gris"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+        <!-- AVISOS -->
+        <LinearLayout
+            android:id="@+id/navAvisos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iconAvisos"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="Avisos"
+                android:src="@drawable/ic_notifications" />
+
+            <TextView
+                android:id="@+id/textAvisos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Avisos"
+                android:textColor="@color/icono_gris"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+        <!-- PERFIL -->
+        <LinearLayout
+            android:id="@+id/navPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iconPerfil"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:contentDescription="Perfil"
+                android:src="@drawable/ic_person" />
+
+            <TextView
+                android:id="@+id/textPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Perfil"
+                android:textColor="@color/icono_gris"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
