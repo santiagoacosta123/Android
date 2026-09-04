@@ -10,54 +10,55 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Manupuladora">
-
-        <!-- LOGIN -->
         <activity
-            android:name="com.example.siraepae.manupuladora.activity_login"
+            android:name=".manupuladora.dialog_info"
+            android:exported="false" />
+        <activity
+            android:name=".manupuladora.reportes_mani"
+            android:exported="false"
+            android:theme="@style/Theme.Manupuladora" />
+        <activity
+            android:name=".manupuladora.registro_preparacion_mani"
+            android:exported="false" />
+        <activity
+            android:name=".manupuladora.info_menu_mani"
+            android:exported="false" />
+        <activity
+            android:name=".manupuladora.avisos_mani"
+            android:exported="false" />
+        <activity
+            android:name=".manupuladora.perfil_mani"
+            android:exported="false" /> <!-- LOGIN -->
+        <activity
+            android:name=".manupuladora.activity_login"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-
-        <!-- DASHBOARD -->
+        </activity> <!-- DASHBOARD -->
         <activity
-            android:name="com.example.siraepae.manupuladora.activity_dashboard"
-            android:exported="false" />
-
-        <!-- INVENTARIO -->
+            android:name=".manupuladora.activity_dashboard"
+            android:exported="false" /> <!-- INVENTARIO -->
         <activity
-            android:name="com.example.siraepae.manupuladora.activity_inventario"
-            android:exported="false" />
-
-        <!-- PREPARACIONES ASIGNADAS -->
+            android:name=".manupuladora.activity_inventario"
+            android:exported="false" /> <!-- PREPARACIONES ASIGNADAS -->
         <activity
-            android:name="com.example.siraepae.manupuladora.preparaciones_asignadas"
-            android:exported="false" />
-
-        <!-- CHOCOLATE -->
+            android:name=".manupuladora.preparaciones_asignadas"
+            android:exported="false" /> <!-- CHOCOLATE -->
         <activity
-            android:name="com.example.siraepae.manupuladora.activity_preparacion_chocolate"
-            android:exported="false" />
-
-        <!-- HUEVO REVUELTO -->
+            android:name=".manupuladora.activity_preparacion_chocolate"
+            android:exported="false" /> <!-- HUEVO REVUELTO -->
         <activity
-            android:name="com.example.siraepae.manupuladora.preparacion_huevo_revuelto"
-            android:exported="false" />
-
-        <!-- AREPA DE MAÍZ -->
+            android:name=".manupuladora.preparacion_huevo_revuelto"
+            android:exported="false" /> <!-- AREPA DE MAÍZ -->
         <activity
-            android:name="com.example.siraepae.manupuladora.preparacion_arepa_maiz"
-            android:exported="false" />
-
-        <!-- MAIN ACTIVITY -->
+            android:name=".manupuladora.preparacion_arepa_maiz"
+            android:exported="false" /> <!-- MAIN ACTIVITY -->
         <activity
-            android:name="com.example.siraepae.manupuladora.MainActivity"
+            android:name=".manupuladora.MainActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>

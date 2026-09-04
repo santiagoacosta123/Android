@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.content.res.ColorStateList
 import androidx.core.content.ContextCompat
-import com.example.manupuladora.preparaciones_asignadas
 import com.example.siraepae.R
 import com.example.siraepae.databinding.BottomNavigationManiBinding
 
@@ -80,9 +79,13 @@ class BottomNavigation(
 
             if (pantallaActual != "avisos") {
 
-                // Aquí colocaremos el Intent
-                // cuando tengas la pantalla de avisos.
+                val intent = Intent(
+                    activity,
+                    avisos_mani::class.java
+                )
 
+                activity.startActivity(intent)
+                activity.finish()
             }
         }
 
@@ -93,8 +96,16 @@ class BottomNavigation(
 
         binding.navPerfil.setOnClickListener {
 
-            // Aquí colocaremos el Intent
-            // cuando tengas la pantalla de perfil.
+            if (pantallaActual != "perfil") {
+
+                val intent = Intent(
+                    activity,
+                    perfil_mani::class.java
+                )
+
+                activity.startActivity(intent)
+                activity.finish()
+            }
         }
 
 

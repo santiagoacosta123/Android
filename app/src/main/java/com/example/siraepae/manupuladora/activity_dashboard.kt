@@ -6,9 +6,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.manupuladora.BottomNavigation
-import com.example.manupuladora.dialog_notificaciones
-import com.example.manupuladora.preparaciones_asignadas
 import com.example.siraepae.databinding.ActivityDashboardManiBinding
 
 class activity_dashboard : AppCompatActivity() {
@@ -18,23 +15,12 @@ class activity_dashboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // ==========================================
-        // EDGE TO EDGE
-        // ==========================================
-
         enableEdgeToEdge()
-
-        // ==========================================
-        // VIEW BINDING
-        // ==========================================
 
         binding = ActivityDashboardManiBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
 
-        // ==========================================
-        // INSETS
-        // ==========================================
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { vista, insets ->
 
@@ -52,17 +38,11 @@ class activity_dashboard : AppCompatActivity() {
             insets
         }
 
-        // ==========================================
-        // CONFIGURAR BOTONES
-        // ==========================================
 
         configurarNotificaciones()
 
         configurarCategorias()
 
-        // ==========================================
-        // BARRA INFERIOR
-        // ==========================================
 
         val bottomNavigation = BottomNavigation(
             this,
@@ -72,9 +52,6 @@ class activity_dashboard : AppCompatActivity() {
         bottomNavigation.configurar("inicio")
     }
 
-    // ==================================================
-    // NOTIFICACIONES
-    // ==================================================
 
     private fun configurarNotificaciones() {
 
@@ -88,10 +65,6 @@ class activity_dashboard : AppCompatActivity() {
             )
         }
     }
-
-    // ==================================================
-    // CATEGORÍAS
-    // ==================================================
 
     private fun configurarCategorias() {
 
@@ -107,10 +80,6 @@ class activity_dashboard : AppCompatActivity() {
             abrirPreparacionesAsignadas("Almuerzo")
         }
     }
-
-    // ==================================================
-    // ABRIR PREPARACIONES ASIGNADAS
-    // ==================================================
 
     private fun abrirPreparacionesAsignadas(
         categoria: String

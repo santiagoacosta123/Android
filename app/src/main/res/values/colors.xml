@@ -16,9 +16,9 @@
     <color name="texto_gris">#777777</color>
     <color name="icono_gris">#777777</color>
 
-    <!-- Barra inferior -->
     <color name="barra_fondo">#FFFFFF</color>
     <color name="barra_borde">#F0D779</color>
+    <color name="borde">#E0E0E0</color>
 
     <color name="azul_original">#2F6FA3</color>
     <color name="azul_muy_claro">#EAF3FA</color>

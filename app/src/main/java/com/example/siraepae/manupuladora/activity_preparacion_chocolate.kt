@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.manupuladora.popup_estado
 import com.example.siraepae.R
 import com.example.siraepae.databinding.ActivityPrepChocolateManiBinding
 
@@ -23,25 +22,15 @@ class activity_preparacion_chocolate : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // ==========================================
-        // EDGE TO EDGE
-        // ==========================================
 
         enableEdgeToEdge()
 
-        // ==========================================
-        // VIEW BINDING
-        // ==========================================
 
         binding = ActivityPrepChocolateManiBinding.inflate(
             layoutInflater
         )
 
         setContentView(binding.root)
-
-        // ==========================================
-        // INSETS
-        // ==========================================
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { vista, insets ->
 
@@ -59,17 +48,9 @@ class activity_preparacion_chocolate : AppCompatActivity() {
             insets
         }
 
-        // ==========================================
-        // BOTÓN VOLVER
-        // ==========================================
-
         binding.btnVolver.setOnClickListener {
             finish()
         }
-
-        // ==========================================
-        // BOTÓN ESTADO
-        // ==========================================
 
         binding.btnTerminado.setOnClickListener {
 
@@ -85,9 +66,6 @@ class activity_preparacion_chocolate : AppCompatActivity() {
         }
     }
 
-    // ==========================================
-    // RECIBIR ESTADO DEL POPUP
-    // ==========================================
 
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(
@@ -116,9 +94,6 @@ class activity_preparacion_chocolate : AppCompatActivity() {
         }
     }
 
-    // ==========================================
-    // ACTUALIZAR BOTÓN SEGÚN EL ESTADO
-    // ==========================================
 
     private fun actualizarEstado(estado: String) {
 

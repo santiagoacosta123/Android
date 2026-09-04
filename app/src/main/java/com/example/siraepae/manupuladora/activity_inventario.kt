@@ -6,36 +6,22 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.manupuladora.BottomNavigation
 import com.example.siraepae.databinding.ActivityInventarioManiBinding
 
 class activity_inventario : AppCompatActivity() {
 
-    // ==================================================
-    // VIEW BINDING
-    // ==================================================
 
     private lateinit var binding: ActivityInventarioManiBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // ==================================================
-        // EDGE TO EDGE
-        // ==================================================
 
         enableEdgeToEdge()
-
-        // ==================================================
-        // VIEW BINDING
-        // ==================================================
 
         binding = ActivityInventarioManiBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // ==================================================
-        // INSETS
-        // ==================================================
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { vista, insets ->
 
@@ -53,18 +39,10 @@ class activity_inventario : AppCompatActivity() {
             insets
         }
 
-        // ==================================================
-        // CONFIGURAR PANTALLA
-        // ==================================================
-
         configurarBotonAtras()
         configurarBusqueda()
         configurarNavegacion()
     }
-
-    // ==================================================
-    // BOTÓN ATRÁS
-    // ==================================================
 
     private fun configurarBotonAtras() {
 
@@ -73,9 +51,6 @@ class activity_inventario : AppCompatActivity() {
         }
     }
 
-    // ==================================================
-    // BUSCAR
-    // ==================================================
 
     private fun configurarBusqueda() {
 
@@ -88,10 +63,6 @@ class activity_inventario : AppCompatActivity() {
             ).show()
         }
     }
-
-    // ==================================================
-    // NAVEGACIÓN INFERIOR
-    // ==================================================
 
     private fun configurarNavegacion() {
 
