@@ -15,23 +15,11 @@ class preparacion_arepa_maiz : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // ==========================================
-        // EDGE TO EDGE
-        // ==========================================
-
         enableEdgeToEdge()
-
-        // ==========================================
-        // VIEW BINDING
-        // ==========================================
 
         binding = ActivityPrepArepaMaizManiBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // ==========================================
         // INSETS
-        // ==========================================
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { vista, insets ->
 
@@ -49,17 +37,13 @@ class preparacion_arepa_maiz : AppCompatActivity() {
             insets
         }
 
-        // ==========================================
         // BOTÓN VOLVER
-        // ==========================================
 
         binding.btnVolver.setOnClickListener {
             finish()
         }
 
-        // ==========================================
         // BOTÓN ESTADO
-        // ==========================================
 
         binding.btnEstado.setOnClickListener {
 

@@ -15,15 +15,11 @@ class preparacion_huevo_revuelto : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // ==========================================
         // EDGE TO EDGE
-        // ==========================================
 
         enableEdgeToEdge()
 
-        // ==========================================
         // VIEW BINDING
-        // ==========================================
 
         binding = ActivityPrepHuevoRevueltoManiBinding.inflate(
             layoutInflater
@@ -31,9 +27,7 @@ class preparacion_huevo_revuelto : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        // ==========================================
         // INSETS
-        // ==========================================
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { vista, insets ->
 
@@ -50,18 +44,13 @@ class preparacion_huevo_revuelto : AppCompatActivity() {
 
             insets
         }
-
-        // ==========================================
         // BOTÓN VOLVER
-        // ==========================================
 
         binding.btnVolver.setOnClickListener {
             finish()
         }
 
-        // ==========================================
         // BOTÓN ESTADO
-        // ==========================================
 
         binding.btnEstado.setOnClickListener {
 
@@ -74,9 +63,7 @@ class preparacion_huevo_revuelto : AppCompatActivity() {
         }
     }
 
-    // ==========================================
     // CAMBIAR ESTADO
-    // ==========================================
 
     private fun cambiarEstado(estado: String) {
 

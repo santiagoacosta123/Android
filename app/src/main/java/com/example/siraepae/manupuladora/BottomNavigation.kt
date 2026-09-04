@@ -14,10 +14,7 @@ class BottomNavigation(
 
     fun configurar(pantallaActual: String) {
 
-        // ==================================================
         // INICIO
-        // ==================================================
-
         binding.navInicio.setOnClickListener {
 
             if (pantallaActual != "inicio") {
@@ -32,10 +29,7 @@ class BottomNavigation(
             }
         }
 
-
-        // ==================================================
         // ASIGNADAS
-        // ==================================================
 
         binding.navAsignadas.setOnClickListener {
 
@@ -51,10 +45,7 @@ class BottomNavigation(
             }
         }
 
-
-        // ==================================================
         // INVENTARIO
-        // ==================================================
 
         binding.navInventario.setOnClickListener {
 
@@ -70,10 +61,7 @@ class BottomNavigation(
             }
         }
 
-
-        // ==================================================
         // AVISOS
-        // ==================================================
 
         binding.navAvisos.setOnClickListener {
 
@@ -89,10 +77,7 @@ class BottomNavigation(
             }
         }
 
-
-        // ==================================================
         // PERFIL
-        // ==================================================
 
         binding.navPerfil.setOnClickListener {
 
@@ -108,18 +93,12 @@ class BottomNavigation(
             }
         }
 
-
-        // ==================================================
         // MARCAR PANTALLA ACTUAL
-        // ==================================================
 
         seleccionar(pantallaActual)
     }
 
-
-    // ==================================================
     // SELECCIONAR ELEMENTO ACTIVO
-    // ==================================================
 
     private fun seleccionar(pantalla: String) {
 
@@ -133,10 +112,7 @@ class BottomNavigation(
             R.color.icono_gris
         )
 
-
-        // ==================================================
         // TODOS EN GRIS
-        // ==================================================
 
         binding.iconInicio.imageTintList =
             ColorStateList.valueOf(gris)
@@ -167,10 +143,7 @@ class BottomNavigation(
 
         binding.textPerfil.setTextColor(gris)
 
-
-        // ==================================================
         // ELEMENTO ACTIVO
-        // ==================================================
 
         when (pantalla) {
 

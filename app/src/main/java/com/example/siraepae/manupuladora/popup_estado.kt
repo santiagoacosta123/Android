@@ -21,9 +21,7 @@ class popup_estado(
 
         setContentView(R.layout.activity_popup_estado_mani)
 
-        // ==========================================
         // CONFIGURAR VENTANA
-        // ==========================================
 
         window?.apply {
 
@@ -42,9 +40,7 @@ class popup_estado(
             }
         }
 
-        // ==========================================
         // OPCIONES
-        // ==========================================
 
         val opcionPendiente = findViewById<TextView>(
             R.id.opcionPendiente
@@ -58,9 +54,7 @@ class popup_estado(
             R.id.opcionTerminado
         )
 
-        // ==========================================
         // PENDIENTE
-        // ==========================================
 
         opcionPendiente.setOnClickListener {
 
@@ -69,9 +63,7 @@ class popup_estado(
             dismiss()
         }
 
-        // ==========================================
         // EN PREPARACIÓN
-        // ==========================================
 
         opcionPreparacion.setOnClickListener {
 
@@ -80,10 +72,7 @@ class popup_estado(
             dismiss()
         }
 
-        // ==========================================
         // TERMINADO
-        // ==========================================
-
         opcionTerminado.setOnClickListener {
 
             onEstadoSeleccionado("Terminado")
@@ -91,9 +80,7 @@ class popup_estado(
             dismiss()
         }
 
-        // ==========================================
         // CERRAR TOCANDO AFUERA
-        // ==========================================
 
         setCanceledOnTouchOutside(true)
     }

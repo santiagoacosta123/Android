@@ -13,10 +13,7 @@ class activity_login : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginManiBinding
 
-    // ==================================================
     // ÚNICO USUARIO AUTORIZADO
-    // ==================================================
-
     private val correoCorrecto = "laura@pae.com"
     private val contrasenaCorrecta = "123456"
 
@@ -24,23 +21,16 @@ class activity_login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // ==================================================
         // EDGE TO EDGE
-        // ==================================================
 
         enableEdgeToEdge()
 
-        // ==================================================
         // VIEW BINDING
-        // ==================================================
 
         binding = ActivityLoginManiBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // ==================================================
         // INSETS
-        // ==================================================
-
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { vista, insets ->
 
             val systemBars = insets.getInsets(
@@ -56,45 +46,30 @@ class activity_login : AppCompatActivity() {
 
             insets
         }
-
-        // ==================================================
         // CONFIGURACIONES
-        // ==================================================
 
         configurarLogin()
         configurarOlvideContrasena()
     }
 
-
-    // ==================================================
     // LOGIN
-    // ==================================================
 
     private fun configurarLogin() {
 
         binding.btnIngresar.setOnClickListener {
 
-            // ==================================================
             // OBTENER CORREO
-            // ==================================================
 
             val correo = binding.edtCorreo.text
                 .toString()
                 .trim()
 
-
-            // ==================================================
             // OBTENER CONTRASEÑA
-            // ==================================================
 
             val contrasena = binding.edtContrasena.text
                 .toString()
 
-
-            // ==================================================
             // CORREO VACÍO
-            // ==================================================
-
             if (correo.isEmpty()) {
 
                 binding.edtCorreo.error =
@@ -105,10 +80,7 @@ class activity_login : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-
-            // ==================================================
             // CONTRASEÑA VACÍA
-            // ==================================================
 
             if (contrasena.isEmpty()) {
 
@@ -120,19 +92,14 @@ class activity_login : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-
-            // ==================================================
             // VALIDAR CREDENCIALES
-            // ==================================================
 
             if (
                 correo == correoCorrecto &&
                 contrasena == contrasenaCorrecta
             ) {
 
-                // ==================================================
                 // LOGIN CORRECTO
-                // ==================================================
 
                 Toast.makeText(
                     this,
@@ -140,10 +107,7 @@ class activity_login : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
 
-
-                // ==================================================
                 // IR AL DASHBOARD
-                // ==================================================
 
                 val intent = Intent(
                     this,
@@ -157,10 +121,7 @@ class activity_login : AppCompatActivity() {
 
             } else {
 
-                // ==================================================
                 // LOGIN INCORRECTO
-                // ==================================================
-
                 Toast.makeText(
                     this,
                     "Correo o contraseña incorrectos",
@@ -170,10 +131,7 @@ class activity_login : AppCompatActivity() {
         }
     }
 
-
-    // ==================================================
-    // OLVIDÉ MI CONTRASEÑA
-    // ==================================================
+    // OLVIDO CONTRASEÑA
 
     private fun configurarOlvideContrasena() {
 

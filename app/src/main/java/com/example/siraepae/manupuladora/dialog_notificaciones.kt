@@ -13,9 +13,7 @@ import com.example.siraepae.R
 
 class dialog_notificaciones : DialogFragment() {
 
-    // ==================================================
     // CREAR DIALOG
-    // ==================================================
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
@@ -26,10 +24,7 @@ class dialog_notificaciones : DialogFragment() {
         return dialog
     }
 
-
-    // ==================================================
     // CARGAR XML
-    // ==================================================
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,10 +39,7 @@ class dialog_notificaciones : DialogFragment() {
         )
     }
 
-
-    // ==================================================
     // BOTONES
-    // ==================================================
 
     override fun onViewCreated(
         view: View,
@@ -56,9 +48,7 @@ class dialog_notificaciones : DialogFragment() {
 
         super.onViewCreated(view, savedInstanceState)
 
-        // ==========================================
         // BOTÓN X - CERRAR NOTIFICACIONES
-        // ==========================================
 
         val btnCerrar = view.findViewById<View>(
             R.id.btnCerrarNotificaciones
@@ -70,10 +60,8 @@ class dialog_notificaciones : DialogFragment() {
         }
     }
 
-
-    // ==================================================
     // CONFIGURAR VENTANA
-    // ==================================================
+
 
     override fun onStart() {
 
@@ -81,17 +69,13 @@ class dialog_notificaciones : DialogFragment() {
 
         val window = dialog?.window ?: return
 
-        // ==========================================
         // FONDO TRANSPARENTE
-        // ==========================================
 
         window.setBackgroundDrawableResource(
             android.R.color.transparent
         )
 
-        // ==========================================
         // TAMAÑO
-        // ==========================================
 
         val anchoPantalla =
             resources.displayMetrics.widthPixels
@@ -103,10 +87,7 @@ class dialog_notificaciones : DialogFragment() {
             anchoDialogo,
             WindowManager.LayoutParams.WRAP_CONTENT
         )
-
-        // ==========================================
         // POSICIÓN
-        // ==========================================
 
         window.setGravity(
             Gravity.TOP or Gravity.CENTER_HORIZONTAL
@@ -118,9 +99,7 @@ class dialog_notificaciones : DialogFragment() {
 
         window.attributes = parametros
 
-        // ==========================================
         // CERRAR TOCANDO FUERA
-        // ==========================================
 
         dialog?.setCanceledOnTouchOutside(true)
     }

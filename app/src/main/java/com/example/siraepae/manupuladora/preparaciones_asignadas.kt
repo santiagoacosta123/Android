@@ -16,22 +16,16 @@ class preparaciones_asignadas : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // ==================================================
         // EDGE TO EDGE
-        // ==================================================
 
         enableEdgeToEdge()
 
-        // ==================================================
         // VIEW BINDING
-        // ==================================================
 
         binding = ActivityPrepAsigManiBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // ==================================================
         // CATEGORÍA SELECCIONADA
-        // ==================================================
 
         val categoria = intent.getStringExtra(
             "CATEGORIA_SELECCIONADA"
@@ -42,9 +36,7 @@ class preparaciones_asignadas : AppCompatActivity() {
         binding.txtTituloPreparaciones.text =
             "Preparaciones de $categoria"
 
-        // ==================================================
         // INSETS
-        // ==================================================
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { vista, insets ->
 
@@ -61,10 +53,7 @@ class preparaciones_asignadas : AppCompatActivity() {
 
             insets
         }
-
-        // ==================================================
         // BOTTOM NAVIGATION
-        // ==================================================
 
         val bottomNavigation = BottomNavigation(
             this,
@@ -73,13 +62,9 @@ class preparaciones_asignadas : AppCompatActivity() {
 
         bottomNavigation.configurar("asignadas")
 
-        // ==================================================
         // BOTONES DE PREPARACIONES
-        // ==================================================
 
-        // ==================================================
         // CHOCOLATE EN LECHE
-        // ==================================================
 
         binding.cardChocolateLeche.setOnClickListener {
 
@@ -90,10 +75,7 @@ class preparaciones_asignadas : AppCompatActivity() {
 
             startActivity(intent)
         }
-
-        // ==================================================
         // HUEVO REVUELTO
-        // ==================================================
 
         binding.cardHuevoRevuelto.setOnClickListener {
 
@@ -105,9 +87,7 @@ class preparaciones_asignadas : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // ==================================================
         // AREPA DE MAÍZ
-        // ==================================================
 
         binding.cardArepaMaiz.setOnClickListener {
 
@@ -118,8 +98,6 @@ class preparaciones_asignadas : AppCompatActivity() {
 
             startActivity(intent)
         }
-
-        // ==================================================
         // BANANO
         // ==================================================
         // Sin acción por ahora porque todavía no tenemos
