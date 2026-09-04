@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="perfil_borde_amarillo" />
+    <drawable name="perfil_ic_book" />
+    <drawable name="perfil_ic_cleaning" />
+    <drawable name="perfil_ic_info" />
+    <drawable name="perfil_ic_logout" />
+</resources>
